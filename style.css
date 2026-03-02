@@ -1,0 +1,101 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body{
+    background-color: #D3F3EE;
+}
+
+h1{
+    background-color: black;
+    color: white;
+    height: 80px;
+    line-height: 80px;
+}
+
+
+.choices{
+    height: 200px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+   
+    justify-content: space-around;
+}
+
+.choice{
+    display: flex;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.choice:hover{
+    cursor: pointer;
+    background-color: black;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.images:hover{
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+    border: 2px solid black;
+    
+}
+
+.score-board{
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.score-board .score{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    line-height: 100px;
+    font-size: 30px;
+}
+
+#you{
+    color: black;
+}
+
+#computer{
+    color: black;
+}
+
+.newbtn{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.newbtn p{
+    height: 50px;
+    display: inline;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+    padding: 10px;
+
+}
