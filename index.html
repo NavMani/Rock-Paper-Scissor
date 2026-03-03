@@ -1,44 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock Paper Scissors Arena</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Rock Paper Scissor Game</h1>
-    
-    <div class="choices">
-        <div class="choice" id="rock">
-            <img class="images" src = "images/rock.png">
-        </div>
-        <div class="choice" id="paper">
-            <img class="images" src = "images/paper.png">
-        </div>
-        <div class="choice" id="scissor">
-            <img class="images" src = "images/scissors.png">
-        </div>
-    </div>
+    <h1>Rock Paper Scissors</h1>
 
     <div class="score-board">
-        <div class="score">
-            <p id="user-score">0</p>
-            <p id="you">You</p>
+        <div class="score-container">
+            <p id="you">Player</p>
+            <p class="score-number" id="user-score">0</p>
         </div>
-        <div class="score">
-            <p id="computer-score">0</p>
-            <p id="computer">Computer</p>
+        <div class="versus-text">VS</div>
+        <div class="score-container">
+            <p id="computer">CPU</p>
+            <p class="score-number" id="computer-score">0</p>
+        </div>
     </div>
-   
-    </div>
-     <div class="newbtn">
-        <p id = "msg">Play your move</p>
-    </div>
-    
 
-    
-<script src="App.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <div class="arena" style="position: relative;">
+        <!-- Left Side: User Choices -->
+        <div class="user-side">
+            <div class="choices">
+                <div class="choice" id="rock" role="button" aria-label="Rock">
+                    <img src="images/rock.png" alt="Rock">
+                </div>
+                <div class="choice" id="paper" role="button" aria-label="Paper">
+                    <img src="images/paper.png" alt="Paper">
+                </div>
+                <div class="choice" id="scissors" role="button" aria-label="Scissors">
+                    <img src="images/scissors.png" alt="Scissors">
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side: Computer Slot Machine -->
+        <div class="computer-side">
+            <div class="slot-machine-container">
+                <div class="slot-machine" id="computer-display">
+                    <img id="computer-img" src="images/rock.png" alt="Waiting..."
+                        style="opacity: 0.5; filter: grayscale(100%);">
+                </div>
+            </div>
+        </div>
+
+        <!-- Center Combat Area overlay -->
+        <div id="combat-area">
+            <div class="combatant" id="user-combatant">
+                <img id="user-combat-img" src="" alt="User Choice">
+            </div>
+            <div id="clash-spark">💥</div>
+            <div class="combatant" id="cpu-combatant">
+                <img id="cpu-combat-img" src="" alt="CPU Choice">
+            </div>
+        </div>
+    </div>
+
+    <div class="newbtn">
+        <p id="msg">Choose your weapon</p>
+    </div>
+
+    <script src="App.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </body>
+
 </html>
